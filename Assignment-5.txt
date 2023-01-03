@@ -1,0 +1,22 @@
+
+#!/bin/bash
+#This script will take two numbers as input and swap them if the second number is a 3 digit number
+swap()
+{
+echo "Please enter the first number"
+read number1
+
+echo "Please enter the second number"
+read number2
+
+if [[ ${#number2} -eq 3 ]]
+then
+	temp=$number1
+	number1=$number2
+	number2=$temp
+	echo "The first number is now $number1 and the second number is now $number2"
+else
+	echo "The second number must be a 3 digit number"
+fi
+}
+swap

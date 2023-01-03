@@ -1,0 +1,8 @@
+#!/bin/bash
+root()
+{
+read -p "Enter a number to find the square root: " num
+sqrt=$(echo "scale=4;sqrt($num)" | bc)
+echo "Square root of $num is $sqrt"
+}
+root

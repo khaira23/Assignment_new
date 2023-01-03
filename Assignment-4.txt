@@ -1,0 +1,17 @@
+#!/bin/bash
+filter()
+{
+grep -i -v A file
+}
+filter
+#file is name of the file name which is having content 
+    #Namibia
+    #Nauru
+    #Nepal
+    #Netherlands
+    #NewZealand
+    #Nicaragua
+    #Niger
+    #Nigeria
+    #NorthKorea
+    #Norway

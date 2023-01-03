@@ -1,0 +1,12 @@
+#!/bin/bash
+convert_to_lowercase(){
+    for file in *;
+ do
+       if [ -f "$file" ]; then
+             lowercase=$(echo "$file" | tr '[A-Z]' '[a-z]')
+             nospace=$(echo "$lowercase" | tr -d '[:space:]')
+             mv "$file" "$nospace"
+        fi
+    done
+}
+convert_to_lowercase

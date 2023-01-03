@@ -1,0 +1,22 @@
+
+#!/bin/bash
+assign()
+{
+read -p "Please enter [D] to decrypt or [E] encrypt: " OS
+case $OS in
+"e"|"E")
+read -p "Enter the name of the file you want to encrypt: " $EN
+gpg -e -r harpreet $EN                                         #harpreet is the gpg key 
+echo "Task completed"
+unset EN
+;;
+"d"|"D")
+read -p "Enter the name of the file you want to decrypt: " $DN
+gpg -e -r harpreet $DN
+echo "Task completed"
+unset DN
+;;
+*)
+}
+assign
+
